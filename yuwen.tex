@@ -1,0 +1,33 @@
+\documentclass[scheme=chinese]{ctexart}
+\usepackage{hanzibox}
+
+\title{小学二年级语文数学题目模板}
+\begin{document}
+\maketitle
+\section{语文}
+\subsection{随机汉字练习}
+
+\ExplSyntaxOn
+\clist_set:Nn \l__words_clist
+{
+{铅笔} , {橡皮} , {报纸} ,
+{头发} , {耳朵} , {眼睛} ,
+{大象} , {蚂蚁} , {松鼠} ,
+{男孩} , {同学} , {兄弟} ,
+{学生} , {医生} , {护士} ,
+{老师} , {警察} , {羊肉} ,
+{窗户} , {镜子} , {沙发}
+}
+\hanziboxset{frametype=口,charf=\huge,pinyinf=\footnotesize,hanzi=false}
+\int_step_inline:nn {6}
+{
+\hanzibox{\clist_rand_item:N \l__words_clist}\hspace{1cm}
+}
+\ExplSyntaxOff
+
+\subsection{拼一拼，写一写}
+%\hanziboxset{frametype=咪,hanzi=true}
+\hanzibox[hanzi=true]{门}\hanzibox{口}
+\hanzibox[hanzi=true]{大}\hanzibox{学}
+\hanzibox{沙}\hanzibox[hanzi=true]{发}
+\end{document}

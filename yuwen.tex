@@ -236,12 +236,14 @@
 {路边},
 {生气},
 }
-%\hanziboxset{frametype=口,framecolor=red,crosscolorratio=10,pinyinf=\Huge,tranf=\Huge,charf=\Huge,pinyinf=\footnotesize,hanzi=false}
-\hanziboxset{frametype=口,charf=\Huge,pinyinf=\footnotesize,hanzi=false}
+\hanziboxset{frametype=口,charf=\Huge,pinyinf=\footnotesize,hanzi=false,scale=1.5,resize=real}
 \int_step_inline:nn {30}
 {
+%\hanzibox[resize=real]{\clist_rand_item:N \l__words_clist}\hspace{1cm}
 \hanzibox{\clist_rand_item:N \l__words_clist}\hspace{1cm}
 }
 \ExplSyntaxOff
+
+
 
 \end{document}
